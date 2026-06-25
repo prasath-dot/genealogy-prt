@@ -57,7 +57,7 @@
     @filamentScripts
     @stack('scripts')
 </body>
-<body x-data="{ darkMode: localStorage.getItem('theme') === 'dark' }"
+<body x-data="{ darkMode: localStorage.getItem('theme') === 'dark:bg-slate-900' }"
       :class="{ 'dark': darkMode }"
       x-init="$watch('darkMode', val => localStorage.setItem('theme', val ? 'dark' : 'light'))">
 
