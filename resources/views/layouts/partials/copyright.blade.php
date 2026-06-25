@@ -3,7 +3,7 @@
     <div class="text-left">
         <p>
             Copyright © {{ date('Y') }} |
-            <x-link href="https://www.brandkloudcom target="_blank" aria-label="Visit Brandkloud website">
+            <x-link href="https://www.brandkloud.in target="_blank" aria-label="Visit Brandkloud website">
                 BRANDKLOUD
             </x-link>.
         </p>
@@ -20,14 +20,14 @@
             <p>
                 {{ __('app.design_development') }}<br />
                 {{ __('app.by') }}
-                <x-link href="https://www.brandkloudcom/" target="_blank" aria-label="Visit Brandkloud website">
+                <x-link href="https://www.brandkloud.in/" target="_blank" aria-label="Visit Brandkloud website">
                     BRANDKLOUD
                 </x-link>
             </p>
         </div>
 
         <!-- Kreaweb Logo -->
-        <a href="https://www.brandkloudcom/" target="_blank" title="Brandkloud" aria-label="Visit Brandkloud website">
+        <a href="https://www.brandkloud.in/" target="_blank" title="Brandkloud" aria-label="Visit Brandkloud website">
             <x-svg.kreaweb class="size-11 dark:fill-white hover:fill-primary-300 dark:hover:fill-primary-300" alt="Kreaweb Logo" />
         </a>
     </div>
