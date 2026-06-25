@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="description" content="Genealogy Application - Manage your family tree and discover your ancestry.">
+    <meta name="description" content="FAM knoW - Manage your family tree and discover your ancestry.">
 
-    <title>{{ config('app.name', 'Genealogy') }} @yield('title')</title>
+    <title>{{ config('app.name', 'FAM knoW') }} @yield('title')</title>
 
     <!-- favicon -->
     <link rel="icon" type="image/png" href="{{ asset('img/favicon/favicon-16x16.png') }}" sizes="16x16">
@@ -45,7 +45,7 @@
         <main>
             {{ $slot }}
 
-            <x-ts-back-to-top square color="green" />
+            <x-ts-back-to-top square color="blue" />
         </main>
 
         <!-- footer -->
@@ -57,8 +57,24 @@
     @filamentScripts
     @stack('scripts')
 </body>
-<body x-data="{ darkMode: localStorage.getItem('theme') === 'dark:bg-slate-900' }"
+
+<!DOCTYPE html>
+<html lang="en"
+      x-data="{ darkMode: localStorage.getItem('theme') === 'dark' }"
       :class="{ 'dark': darkMode }"
       x-init="$watch('darkMode', val => localStorage.setItem('theme', val ? 'dark' : 'light'))">
+<head>
+    <!-- Your meta tags, Livewire styles, and Vite assets go here -->
+    @livewireStyles
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-200">
+    
+    <!-- Your Sidebar and Dashboard Content -->
+    {{ $slot }}
+
+    @livewireScripts
+</body>
+</html>
 
 </html>
